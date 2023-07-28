@@ -2,12 +2,13 @@
 
 import { useDispatch } from "react-redux"
 
-export default function Modal ({cleare, toglle,clearBasket}) {
+export default function Modal ({cleare, toglle,clearBasket,cleareAmount}) {
     const dispatch = useDispatch()
     const confirm = () =>{
         dispatch(toglle())
         dispatch(cleare())
         dispatch(clearBasket())
+        dispatch(cleareAmount())
     }
     const cancel = () =>{
         dispatch(toglle())
